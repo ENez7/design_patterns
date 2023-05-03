@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using DesignPatterns.AbstractFactory;
 using DesignPatterns.AbstractFactory.Factories;
 using DesignPatterns.Factory;
 using DesignPatterns.Singleton;
@@ -54,19 +55,22 @@ Console.WriteLine("3. Contemporary");
 
 var option = Convert.ToInt32(Console.ReadLine());
 
-IAbstractFactory factory = option switch
+var client = new Client();
+
+switch (option)
 {
-    1 => new ModernFactory(),
-    2 => new VictorianFactory(),
-    3 => new ContemporaryFactory(),
-    _ => null!
-};
+    case 1:
+        client.AddFactory(new ModernFactory());
+        break;
+    case 2:
+        client.AddFactory(new VictorianFactory());
+        break;
+    case 3:
+        client.AddFactory(new ContemporaryFactory());
+        break;
+    default:
+        Console.WriteLine("No family of products found for that option");
+        break;
+}
 
-var chair = factory.CreateChair();
-var couch = factory.CreateCouch();
-var table = factory.CreateTable();
-
-// Checking for types
-Console.WriteLine($"Chair type: {chair.GetType()}");
-Console.WriteLine($"Couch type: {couch.GetType()}");
-Console.WriteLine($"Table type: {table.GetType()}");
+client.ShowProducts();
