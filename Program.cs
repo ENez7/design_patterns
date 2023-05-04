@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using DesignPatterns.AbstractFactory;
+using DesignPatterns.Builder;
+// using DesignPatterns.AbstractFactory;
 using DesignPatterns.AbstractFactory.Factories;
 using DesignPatterns.Factory;
 using DesignPatterns.Singleton;
@@ -48,29 +49,36 @@ using DesignPatterns.Singleton;
  *  Abstract Factory section
  */
 
-Console.WriteLine("Select family of products:");
-Console.WriteLine("1. Modern");
-Console.WriteLine("2. Victorian");
-Console.WriteLine("3. Contemporary");
+// Console.WriteLine("Select family of products:");
+// Console.WriteLine("1. Modern");
+// Console.WriteLine("2. Victorian");
+// Console.WriteLine("3. Contemporary");
+//
+// var option = Convert.ToInt32(Console.ReadLine());
+//
+// var client = new Client();
+//
+// switch (option)
+// {
+//     case 1:
+//         client.AddFactory(new ModernFactory());
+//         break;
+//     case 2:
+//         client.AddFactory(new VictorianFactory());
+//         break;
+//     case 3:
+//         client.AddFactory(new ContemporaryFactory());
+//         break;
+//     default:
+//         Console.WriteLine("No family of products found for that option");
+//         break;
+// }
+//
+// client.ShowProducts();
 
-var option = Convert.ToInt32(Console.ReadLine());
-
-var client = new Client();
-
-switch (option)
-{
-    case 1:
-        client.AddFactory(new ModernFactory());
-        break;
-    case 2:
-        client.AddFactory(new VictorianFactory());
-        break;
-    case 3:
-        client.AddFactory(new ContemporaryFactory());
-        break;
-    default:
-        Console.WriteLine("No family of products found for that option");
-        break;
-}
-
-client.ShowProducts();
+/*
+ *  Builder section
+ */
+ 
+ var client = new Client();
+ client.Run();
