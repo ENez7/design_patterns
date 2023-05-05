@@ -4,7 +4,6 @@ public class WoodenHouseBuilder : IBuilder
 {
     private WoodenHouse _woodenHouse = new();
 
-
     public void Reset()
     {
         _woodenHouse = new WoodenHouse();
@@ -34,7 +33,7 @@ public class WoodenHouseBuilder : IBuilder
     {
         _woodenHouse.NumberOfRooms = numberOfRooms;
     }
-    
+
     public BaseHouse GetHouse()
     {
         return _woodenHouse;

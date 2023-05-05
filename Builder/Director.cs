@@ -1,28 +1,42 @@
 ﻿namespace DesignPatterns.Builder;
 
 public class Director
-{ // ESTO ESTA BIEN PERO SE DEBE CORREGIR POR LA CONFUSION
-    public BaseHouse BuildWoodenHouse(IBuilder builder)
-    {
-        builder.Reset();
-        builder.BuildWalls(4);
-        builder.BuildDoors(1);
-        builder.BuildWindows(4);
-        builder.BuildRoof(1);
-        builder.BuildRooms(1);
-
-        return builder.GetHouse();
-    }
+{
+    private IBuilder _builder;
     
-    public BaseHouse BuildCobblestoneHouse(IBuilder builder)
+    public Director(IBuilder builder)
     {
-        builder.Reset();
-        builder.BuildWalls(8);
-        builder.BuildDoors(2);
-        builder.BuildWindows(8);
-        builder.BuildRoof(2);
-        builder.BuildRooms(2);
+        _builder = builder;
+    }
 
-        return builder.GetHouse();
+    public void ChangeBuilder(IBuilder newBuilder)
+    {
+        _builder = newBuilder;
+    }
+
+    public void Make()
+    {
+        _builder.Reset();
+        Console.WriteLine("Number of doors: ");
+        var input = Convert.ToInt32(Console.ReadLine());
+        _builder.BuildDoors(input);
+        
+        Console.WriteLine("Number of roofs: ");
+        input = Convert.ToInt32(Console.ReadLine());
+        _builder.BuildRoof(input);
+        
+        Console.WriteLine("Number of windows: ");
+        input = Convert.ToInt32(Console.ReadLine());
+        _builder.BuildWindows(input);
+        
+        Console.WriteLine("Number of rooms: ");
+        input = Convert.ToInt32(Console.ReadLine());
+        _builder.BuildRooms(input);
+        
+        Console.WriteLine("Number of walls: ");
+        input = Convert.ToInt32(Console.ReadLine());
+        _builder.BuildWalls(input);
+        
+        Console.WriteLine(_builder.GetHouse());
     }
 }

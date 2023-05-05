@@ -6,6 +6,7 @@ public class WoodenHouse : BaseHouse
 
     public override string ToString()
     {
-        return $"Wooden house with {NumberOfWalls} walls, {NumberOfDoors} doors, {NumberOfWindows} windows, {NumberOfRoof} roof and {NumberOfRooms} rooms";
+        return $"Wooden house with {NumberOfWalls} wall(s), {NumberOfDoors} door(s), " +
+               $"{NumberOfWindows} window(s), {NumberOfRoof} roof(s) and {NumberOfRooms} room(s)";
     }
 }
