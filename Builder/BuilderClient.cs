@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Builder;
 
-public class BuilderClient
+public static class BuilderClient
 {
     public static void Run()
     {
