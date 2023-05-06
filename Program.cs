@@ -3,6 +3,7 @@
 using DesignPatterns.Builder;
 using DesignPatterns.AbstractFactory;
 using DesignPatterns.AbstractFactory.Factories;
+using DesignPatterns.Adapter;
 using DesignPatterns.Factory;
 using DesignPatterns.Prototype;
 using DesignPatterns.Singleton;
@@ -87,4 +88,11 @@ using DesignPatterns.Singleton;
  *  Prototype section
  */
  
- PrototypeClient.Run();
+// PrototypeClient.Run();
+ 
+/*
+ *  Adapter section
+ */
+ 
+AdapterClient.Run();
+ 
