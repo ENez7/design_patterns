@@ -17,4 +17,4 @@ We can then create a `Client` class that uses the appropriate factory to create 
 
 ## UML Diagram
 
-![Abstract Factory Design Pattern](../Assets/abstract_factory_uml.png)
+![Abstract Factory Design Pattern](../assets/abstract_factory_uml.png)

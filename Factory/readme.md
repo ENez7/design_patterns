@@ -14,4 +14,4 @@ the Logistics interface. The `RoadLogistics` factory creates
 objects.
 
 ## UML Diagram
-![Factory UML](../Assets/factory_uml.png)
+![Factory UML](../assets/factory_uml.png)

@@ -36,4 +36,4 @@ public static Settings GetInstance()
 
 # UML Diagram
 
-![singleton_uml.png](../Assets/singleton_uml.png)
+![singleton_uml.png](../assets/singleton_uml.png)
