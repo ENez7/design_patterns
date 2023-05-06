@@ -4,6 +4,7 @@ using DesignPatterns.Builder;
 using DesignPatterns.AbstractFactory;
 using DesignPatterns.AbstractFactory.Factories;
 using DesignPatterns.Factory;
+using DesignPatterns.Prototype;
 using DesignPatterns.Singleton;
 
 /*
@@ -80,4 +81,10 @@ using DesignPatterns.Singleton;
  *  Builder section
  */
  
-BuilderClient.Run();
+// BuilderClient.Run();
+
+/*
+ *  Prototype section
+ */
+ 
+ PrototypeClient.Run();
